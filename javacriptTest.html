@@ -1,0 +1,48 @@
+
+<!-- Example 1 -->
+
+<input name="myButton" type="button" value="button 1">
+<input name="myButton" type="button" value="button 2">
+<input name="myButton" type="button" value="button 3">
+<script type="text/javascript">
+    var buttons = document.getElementsByName("myButton");
+    for(var i = 0; i < buttons.length; i++){
+        buttons[i].onclick = function(){
+            window.alert("clicked button " + (i + 1));
+        };
+    }
+</script>
+
+
+
+<!-- Example  2 -->
+
+<input name="myButton" type="button" value="button 1">
+<input name="myButton" type="button" value="button 2">
+<input name="myButton" type="button" value="button 3">
+<script type="text/javascript">
+    var buttons = document.querySelectorAll("[name='myButton']");
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            window.alert(`clicked button ${index + 1}`);
+        });
+    });
+</script>
+
+
+<!-- Example 3 -->
+
+<script>
+    // Expected result:
+    // [1,2,1,2,1,2,1,2,1,1,1,1,1,1,1,3,3,3,3,3,3,3,3,3,3]
+
+    const array1 = [1,1,1,1,1,1,1,1,1,1,1]
+    const array2 = [2,2,2,2]
+    const array3 = [3,3,3,3,3,3,3,3,3,3]
+
+    let result = []
+
+    // your code here ...
+
+    console.log(result)
+</script>
